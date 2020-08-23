@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group = 'de.cheaterpaul'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+
+    implementation group: 'com.google.inject', name: 'guice', version: '4.2.2'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.session:spring-session-core'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'io.projectreactor:reactor-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+    useJUnitPlatform()
+}

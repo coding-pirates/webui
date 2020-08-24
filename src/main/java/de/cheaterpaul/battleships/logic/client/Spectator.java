@@ -1,8 +1,5 @@
 package de.cheaterpaul.battleships.logic.client;
 
-import de.cheaterpaul.battleships.logic.client.AbstractClient;
-import de.cheaterpaul.battleships.logic.client.ClientType;
-
 import javax.annotation.Nonnull;
 
 public class Spectator extends AbstractClient {

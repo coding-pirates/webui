@@ -4,7 +4,6 @@ import de.cheaterpaul.battleships.logic.client.AbstractClient;
 import de.cheaterpaul.battleships.server.ClientManager;
 import de.cheaterpaul.battleships.server.GameManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +27,6 @@ public class ClientController {
 
     @GetMapping("/clients")
     public List<AbstractClient> clients() {
-        return new ArrayList<>(clientManager.getClients().values());
+        return new ArrayList<>(clientManager.getPlayerMappings().values());
     }
 }

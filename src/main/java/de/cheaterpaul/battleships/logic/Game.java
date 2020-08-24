@@ -75,7 +75,7 @@ public final class Game {
     }
 
     /**
-     * "Synthetic" getter acting as a delegate to {@link de.cheaterpaul.battleships.logic.Configuration#getMaxPlayerCount()}.
+     * "Synthetic" getter acting as a delegate to {@link de.cheaterpaul.battleships.logic.Configuration#maxPlayerCount}.
      *
      * This getter is required because JavaFX's {@code PropertyValueFactory}, which is used to access the property
      * values of {@code Game} instances for display in a {@code TableView}, is not able to handle nested properties
@@ -84,7 +84,7 @@ public final class Game {
      * @return The maximum amount of players supported by this {@code Game} instance according to its {@link #config}.
      */
     public int getMaxPlayerCount() {
-        return config.getMaxPlayerCount();
+        return config.maxPlayerCount;
     }
 
     /**
